@@ -46,3 +46,5 @@ mv wgcf-profile.conf /etc/wireguard/warp.conf
 sudo systemctl enable --now wg-quick@warp
 
 echo "نصب و تنظیمات با موفقیت انجام شد!"
+
+#Created by Mhdi_TV
