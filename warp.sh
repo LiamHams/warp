@@ -24,8 +24,17 @@ wgcf register
 wgcf update
 wgcf generate
 
-# نصب WireGuard
-sudo apt install wireguard -y
+echo "Choose ubuntu : (22 / 24) : "
+read Ubun
+
+if [ "$ARCH" == "22" ]; then
+    sudo apt install wireguard-dkms wireguard-tools resolvconf -y
+elif [ "$ARCH" == "24" ]; then
+    sudo apt install wireguard -y
+else
+    echo "Ridam to versionet"
+    exit 1
+fi    
 
 # اضافه کردن "Table = off" به فایل کانفیگ
 sed -i '/MTU/a Table = off' wgcf-profile.conf
