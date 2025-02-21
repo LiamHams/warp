@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # انتخاب معماری توسط کاربر
-echo "آیا معماری سرور شما amd64 است یا arm64؟ (لطفاً یکی را تایپ کنید: amd64 / arm64)"
+echo "Choose one : (amd64 / arm64) : "
 read ARCH
 
 # دانلود wgcf بر اساس معماری
@@ -25,7 +25,7 @@ wgcf update
 wgcf generate
 
 # نصب WireGuard
-sudo apt install wireguard-dkms wireguard-tools resolvconf -y
+sudo apt install wireguard -y
 
 # اضافه کردن "Table = off" به فایل کانفیگ
 sed -i '/MTU/a Table = off' wgcf-profile.conf
