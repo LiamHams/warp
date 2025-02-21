@@ -4,7 +4,8 @@
 echo "Select an option:"
 echo "1. Install Warp"
 echo "2. Disable Warp"
-read -p "Enter choice [1-2]: " choice
+echo "3. Enable Warp"
+read -p "Enter choice [1-3]: " choice
 
 case $choice in
     1)
@@ -60,6 +61,11 @@ case $choice in
         # غیرفعال کردن Warp
         sudo systemctl disable --now wg-quick@warp
         echo "Warp has been disabled."
+        echo "Created by Mhdi_TV"
+        ;;
+    3)
+        sudo systemctl enable --now wg-quick@warp
+        echo "Warp has been enabled."
         echo "Created by Mhdi_TV"
         ;;
     *)
