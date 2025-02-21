@@ -10,7 +10,7 @@ if [ "$ARCH" == "amd64" ]; then
 elif [ "$ARCH" == "arm64" ]; then
     wget https://github.com/ViRb3/wgcf/releases/download/v2.2.22/wgcf_2.2.22_linux_arm64 -O /usr/bin/wgcf
 else
-    echo "معماری نامعتبر! لطفاً اسکریپت را دوباره اجرا کرده و مقدار صحیح وارد کنید."
+    echo "Wrong Arch Type!"
     exit 1
 fi
 
@@ -32,7 +32,7 @@ if [ "$ARCH" == "22" ]; then
 elif [ "$ARCH" == "24" ]; then
     sudo apt install wireguard -y
 else
-    echo "Ridam to versionet"
+    echo "Wrong Version!"
     exit 1
 fi    
 
@@ -45,6 +45,6 @@ mv wgcf-profile.conf /etc/wireguard/warp.conf
 # فعال‌سازی و راه‌اندازی WireGuard
 sudo systemctl enable --now wg-quick@warp
 
-echo "نصب و تنظیمات با موفقیت انجام شد!"
+echo "Installation Successful!"
 
 #Created by Mhdi_TV
