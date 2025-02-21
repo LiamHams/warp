@@ -47,4 +47,4 @@ sudo systemctl enable --now wg-quick@warp
 
 echo "Installation Successful!"
 
-#Created by Mhdi_TV
+echo "Created by Mhdi_TV"
